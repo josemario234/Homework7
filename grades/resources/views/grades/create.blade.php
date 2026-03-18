@@ -12,23 +12,23 @@
         <form action="{{ route('grades.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="subject" class="block text-gray-700">Type of Activity</label>
+                <label for="subject" class="form-label">Type of Activity</label>
                 <input type="text" name="subject" id="subject" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="activity" class="block text-gray-700">Activity Name</label>
+                <label for="activity" class="form-label">Activity Name</label>
                 <input type="text" name="activity" id="activity" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="date" class="block text-gray-700">Date</label>
+                <label for="date" class="form-label">Date</label>
                 <input type="date" name="date" id="date" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="grade" class="block text-gray-700">Grade:</label>
-                <input type="number" step="0.01" name="grade" id="grade" class="form-control" required>
+                <label for="grade" class="form-label">Grade:</label>
+                <input type="number" step="0.01" name="grade" id="grade" class="form-control" min="0" max="100" required>
             </div>
-            <button type="submit" class="btn btn-primary">Add Activity</button>
-            <a href="{{ route('grades.index') }}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="primary">Add Activity</button>
+            <a href="{{ route('grades.index') }}" class="secondary">Cancel</a>
         </form>
     </div>
 </body>
